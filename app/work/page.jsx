@@ -171,7 +171,7 @@ const Work = () => {
                     grabCursor={true}
                     modules={[Pagination, Keyboard]}
                     pagination={{ clickable: true }}
-                    className="h-max"
+                    className="h-max "
                   >
                     {projects
                       .filter((project) => project.category === category)
@@ -200,7 +200,7 @@ const Work = () => {
                                     })}
                                   </ul>
                                 </div>
-                                <div className="flex flex-col sm:flex-row gap-4 items-start">
+                                <div className="flex flex-col sm:flex-row gap-4 items-start pb-8">
                                   {project.link && (
                                     <Link href={project.link}>
                                       <button className="btn btn-sm btn-accent flex gap-2">
