@@ -14,7 +14,6 @@ const journey = [
     role: "Power Platform Developer",
     tasks: [
       "I define requirements, design, develop, and finally test implementations with clients. Using Power Platform tools such as Power Automate and Power Apps",
-      "321",
       "Logic apps, Azure functions, Dataverse, Sharepoint",
       "Integrating systems using APIs",
       "Point of contact for clients",
