@@ -72,7 +72,7 @@ const projects = [
       "I built this modern, fully responsive portfolio website to showcase my skills.",
     image: "/assets/work/Portfolio.jpg",
     link: "",
-    github: "",
+    github: "https://github.com/Jebbis/Portfolio",
     tech: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
   },
   {
@@ -89,10 +89,10 @@ const projects = [
   {
     id: 6,
     category: "Game dev",
-    title: "2D RPG",
+    title: "TBD game",
     description:
-      "I built this modern, fully responsive portfolio website to showcase my skills.",
-    image: "/assets/work/Portfolio.jpg",
+      "I built this game project just to learn game development with Godot. The game is in very early stages. It has some feateures as inventory and combat ",
+    image: "/assets/work/Animation.gif",
     link: "",
     github: "",
     tech: ["Godot"],

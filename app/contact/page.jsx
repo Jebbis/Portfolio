@@ -21,6 +21,7 @@ import {
   HiOutlineMail,
   HiOutlineLocationMarker,
 } from "react-icons/hi";
+import Socials from "@/components/Socials";
 
 const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
 const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
@@ -115,19 +116,22 @@ const Contact = () => {
         <div className="w-full">
           <div className="flex flex-col xl:flex-row gap-6">
             {/* info text */}
-            <div className="flex-1 xl:w-[600px] flex flex-col gap-12">
+            <div className="flex-1 xl:w-[600px] flex flex-col gap-4">
               <div>
                 <h2 className="h2 mb-6">
                   Get in <span className="text-accent">Touch</span>
                 </h2>
                 <p className="md:max-w-[600px] xl:max-w-[460px]">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Cumque suscipit nostrum aspernatur, commodi odit architecto ex
-                  aperiam quo necessitatibus quaerat.
+                  The best way to contact me is via LinkedIn, but you can also
+                  reach out using the message box on the right.
                 </p>
               </div>
               {/* info */}
               <div className="flex flex-col gap-4 xl:mb-0">
+                <Socials
+                  containerStyles="flex gap-4 z-40 w-full transform -translate-x-[30px] px-3"
+                  iconStyles="w-[64px] h-[64px] text-[32px] text-accent hover:text-accent-hover transition-all flex items-center justify-center rounded-full cursor-pointer"
+                />
                 <div className="flex items-center gap-4 text-lg">
                   <span className="text-accent">
                     <HiOutlineMail className="text-2xl" />
