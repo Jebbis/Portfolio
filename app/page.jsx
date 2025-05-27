@@ -7,9 +7,10 @@ import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
 // components
 import Blob from "@/components/Blob";
 import Image from "next/image";
-import avatarImg from "@/public/assets/profile-pic.png";
+
 import Socials from "@/components/Socials";
 import Pattern from "@/components/Pattern";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -49,27 +50,27 @@ const page = () => {
             that transform your ideas into seamless, engaging digital
             experiences.
           </p>
-          <button className="btn btn-lg btn-accent mb-16">
+          <Link href="/contact" className="btn btn-lg btn-accent mb-16">
             <div className="flex items-center gap-3">
               <span>Let's talk.</span>
               <MdArrowOutward className="text-xl" />
             </div>
-          </button>
+          </Link>
           {/* contact info */}
           <div className="flex flex-col xl:flex-row xl:items-center gap-4 xl:gap-8 mb-12 xl:mb-0">
             {/* phone */}
-            <div className="flex items-center gap-4 text-lg">
+            {/*             <div className="flex items-center gap-4 text-lg">
               <span className="text-accent">
                 <HiOutlinePhone className="text-xl" />
               </span>
               <span>+444 444 444 44</span>
-            </div>
+            </div> */}
             {/* mail */}
             <div className="flex items-center gap-4 text-lg">
               <span className="text-accent">
                 <HiOutlineMail className="text-xl" />
               </span>
-              <span>lasse@email.fi</span>
+              <span>lassejesperihamalainen(at)gmail.com</span>
             </div>
           </div>
           {/* links */}
@@ -84,11 +85,11 @@ const page = () => {
           <Blob containerStyles="w-[480px] h-[480px]" />
           {/* profile picture */}
           <Image
-            src={avatarImg}
+            src="/assets/profilepic.png"
             alt="profile"
             width={400}
             height={400}
-            quality={100}
+            unoptimized={true}
             className="absolute -top-12 left-[60px]"
           />
           {/* overlay gradient */}

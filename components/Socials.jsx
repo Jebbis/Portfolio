@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BiLogoLinkedin, BiLogoGithub } from "react-icons/bi";
 
 const socials = [
@@ -13,9 +14,9 @@ const Socials = ({ containerStyles, iconStyles }) => {
     <div className={containerStyles}>
       {socials.map((item, index) => {
         return (
-          <div key={index} className={iconStyles}>
+          <Link href={item.path} key={index} className={iconStyles}>
             {item.icon}
-          </div>
+          </Link>
         );
       })}
     </div>

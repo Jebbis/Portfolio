@@ -8,11 +8,24 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import Image from "next/image";
 
 const skills = [
   {
     icon: <RiReactjsFill />,
     name: "React.js",
+  },
+  {
+    icon: (
+      <Image
+        src="/assets/icons/powerautomate.svg"
+        width={32}
+        height={32}
+        unoptimized={true}
+        alt="powerautomate"
+      />
+    ),
+    name: "Power automate",
   },
   {
     icon: <RiNextjsFill />,

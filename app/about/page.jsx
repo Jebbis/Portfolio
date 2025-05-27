@@ -26,10 +26,11 @@ const About = () => {
           {/* image & socials */}
           <div className="hidden xl:flex flex-col w-full h-full pt-14 max-w-[430px] relative ">
             <Image
-              src="/assets/profile-pic.png"
+              src="/assets/profilepic.png"
+              alt="profilepic"
               width={320}
               height={496}
-              alt="profile-pic"
+              unoptimized={true}
               className="z-20 relative "
             />
             {/* overlay */}
@@ -44,7 +45,7 @@ const About = () => {
             />
           </div>
           {/* scroll area */}
-          <ScrollArea className="w-full h-[680px]">
+          <ScrollArea className="w-full h-[750px]">
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-2 h-2 bg-accent rounded-full"></div>
@@ -53,17 +54,26 @@ const About = () => {
               <h2 className="h2 mb-6">
                 <span className="text-accent">Lasse</span> Hämäläinen
               </h2>
-              <p className="max-w-[540px] mb-12">
-                I focus on crafting visually stunning, user-friendly web
-                experiences that not only look great but also function
-                seamlessly, ensuring every detail is carefully designed and
-                executed.
+              <p className="max-w-[540px] mb-8">
+                Power Platform/Integration Developer based in Finland,
+                passionate about continuous learning and hands-on development. I
+                specialize in developing modern business applications with
+                Microsoft Power Platform and building integrations using
+                open-source Apache Camel, and I enjoy working closely with
+                clients throughout the entire development process. Outside of
+                work, I spend my time exploring a wide range of technologies
+                through personal projects – such as building a Smart Home
+                Dashboard, developing a Discord bot, and experimenting with web
+                technologies like TypeScript, C#, and Next.js. I’m always
+                looking for new ways to grow as a developer and build solutions
+                that create real value. Below you’ll find an overview of my
+                skills and experience.
               </p>
-              <div className="flex flex-col items-start gap-16">
+              <div className="flex flex-col items-start gap-8">
+                <Skills />
+                <Journey />
                 <Stats />
                 <Info />
-                <Journey />
-                <Skills />
               </div>
             </div>
           </ScrollArea>
