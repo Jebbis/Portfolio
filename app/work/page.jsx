@@ -94,7 +94,7 @@ const projects = [
       "I built this game project just to learn game development with Godot. The game is in very early stages. It has some feateures as inventory and combat ",
     image: "/assets/work/Animation.gif",
     link: "",
-    github: "",
+    github: "https://github.com/Jebbis/rpg-game",
     tech: ["Godot"],
   },
   {
