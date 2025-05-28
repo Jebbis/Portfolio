@@ -19,7 +19,7 @@ const About = () => {
         opacity: 1,
         transition: { delay: 1.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="h-screen flex items-center"
+      className="h-screen flex items-center "
     >
       <div className="container mx-auto px-0">
         <div className="flex flex-col xl:flex-row items-center gap-24 w-full h-[680px]">
@@ -45,7 +45,7 @@ const About = () => {
             />
           </div>
           {/* scroll area */}
-          <ScrollArea className="w-full h-[750px]">
+          <ScrollArea className="w-full h-full">
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-2 h-2 bg-accent rounded-full"></div>
@@ -60,14 +60,15 @@ const About = () => {
                 specialize in developing modern business applications with
                 Microsoft Power Platform and building integrations using
                 open-source Apache Camel, and I enjoy working closely with
-                clients throughout the entire development process. Outside of
-                work, I spend my time exploring a wide range of technologies
-                through personal projects – such as building a Smart Home
-                Dashboard, developing a Discord bot, and experimenting with web
-                technologies like TypeScript, C#, and Next.js. I’m always
-                looking for new ways to grow as a developer and build solutions
-                that create real value. Below you’ll find an overview of my
-                skills and experience.
+                clients throughout the entire development process. <br />
+                <br />
+                Outside of work, I spend my time exploring a wide range of
+                technologies through personal projects – such as building a
+                Smart Home Dashboard, developing a Discord bot, and
+                experimenting with web technologies like TypeScript, C#, and
+                Next.js. I’m always looking for new ways to grow as a developer
+                and build solutions that create real value. Below you’ll find an
+                overview of my skills and experience.
               </p>
               <div className="flex flex-col items-start gap-8">
                 <Skills />

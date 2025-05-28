@@ -137,7 +137,7 @@ const Work = () => {
     >
       <div className="container mx-auto w-full h-full flex flex-col justify-center">
         {/* heading */}
-        <h2 className="h2 mb-6 xl:mb-12 max-w-[600px]">
+        <h2 className="h2 mb-6 xl:mb-6 max-w-[600px]">
           My latest <span className="text-accent">Work</span>
         </h2>
         {/* tabs */}
@@ -152,7 +152,7 @@ const Work = () => {
                 <TabsTrigger
                   key={category}
                   value={category}
-                  className="capitalize border border-white/10 data-[state=active]:bg-accent h-[48px] px-6 rounded-full cursor-pointer"
+                  className="capitalize border border-white/10 data-[state=active]:bg-accent h-[40px] px-6 rounded-full cursor-pointer"
                 >
                   {category}
                 </TabsTrigger>
@@ -160,80 +160,71 @@ const Work = () => {
             })}
           </TabsList>
           {/* content */}
-          <div className="h-[400px] scrollbar scrollbar-thumb-accent scrollbar-track-accent/5 overflow-y-scroll xl:overflow-y-visible">
+          <div className="max-h-[70vh] pb-8 scrollbar scrollbar-thumb-accent scrollbar-track-accent/5 overflow-y-scroll flex flex-col">
             {categories.map((category) => {
               return (
-                <TabsContent key={category} value={category}>
-                  <Swiper
-                    slidesPerView="auto"
-                    spaceBetween={10}
-                    keyboard={true}
-                    grabCursor={true}
-                    modules={[Pagination, Keyboard]}
-                    pagination={{ clickable: true }}
-                    className="h-max "
-                  >
-                    {projects
-                      .filter((project) => project.category === category)
-                      .map((project) => {
-                        return (
-                          <SwiperSlide
-                            key={project.id}
-                            className="h-full !w-[93%]"
-                          >
-                            <div className="flex flex-col xl:flex-row gap-4 xl:gap-2">
-                              <div className="w-full max-w-[380px] flex flex-col gap-6 xl:gap-8 xl:pt-6 order-2 xl:order-none">
-                                <h3 className="h3">{project.title}</h3>
-                                <div className="xl:mb-4 max-w-[340px] min-h-[130px]">
-                                  <p className="mb-8">{project.description}</p>
-                                  <p className="mb-4">Technologies used:</p>
-                                  <ul className="flex flex-wrap gap-4">
-                                    {project.tech.map((item, index) => {
-                                      return (
-                                        <li
-                                          key={index}
-                                          className="flex items-center gap-4 bg-[#a883ff]/13 h-[28px] px-[14px] rounded-full"
-                                        >
-                                          {item}
-                                        </li>
-                                      );
-                                    })}
-                                  </ul>
-                                </div>
-                                <div className="flex flex-col sm:flex-row gap-4 items-start pb-8">
-                                  {project.link && (
-                                    <Link href={project.link}>
-                                      <button className="btn btn-sm btn-accent flex gap-2">
-                                        <MdArrowOutward className="text-xl" />
-                                        <span>Live Project</span>
-                                      </button>
-                                    </Link>
-                                  )}
-                                  {project.github && (
-                                    <Link href={project.github}>
-                                      <button className="btn btn-sm btn-white flex gap-2">
-                                        <FaGithub className="text-xl" />
-                                        <span>Github Repo</span>
-                                      </button>
-                                    </Link>
-                                  )}
-                                </div>
+                <TabsContent
+                  key={category}
+                  value={category}
+                  className="flex flex-col gap-16 pb-8"
+                >
+                  {projects
+                    .filter((project) => project.category === category)
+                    .map((project) => {
+                      return (
+                        <div key={project.id}>
+                          <div className="flex flex-col xl:flex-row gap-4">
+                            <div className="w-full max-w-[380px] flex flex-col gap-6 xl:gap-8 order-2 xl:order-none">
+                              <h3 className="h3">{project.title}</h3>
+                              <div className="xl:mb-4 max-w-[340px] min-h-[130px]">
+                                <p className="mb-8">{project.description}</p>
+                                <p className="mb-4">Technologies used:</p>
+                                <ul className="flex flex-wrap gap-4">
+                                  {project.tech.map((item, index) => {
+                                    return (
+                                      <li
+                                        key={index}
+                                        className="flex items-center gap-4 bg-[#a883ff]/13 h-[28px] px-[14px] rounded-full"
+                                      >
+                                        {item}
+                                      </li>
+                                    );
+                                  })}
+                                </ul>
                               </div>
-                              <div className="w-full h-[200px] md:h-[300pxl: xl:h-[400px] relative  order-1 xl:order-none rounded-lg overflow-hidden">
-                                <Image
-                                  src={project.image}
-                                  alt={project.image}
-                                  objectPosition="left"
-                                  fill
-                                  unoptimized={true}
-                                  className="object-cover pr-4"
-                                />
+                              <div className="flex flex-col sm:flex-row gap-4 items-start pb-4">
+                                {project.link && (
+                                  <Link href={project.link}>
+                                    <button className="btn btn-sm btn-accent flex gap-2">
+                                      <MdArrowOutward className="text-xl" />
+                                      <span>Live Project</span>
+                                    </button>
+                                  </Link>
+                                )}
+                                {project.github && (
+                                  <Link href={project.github}>
+                                    <button className="btn btn-sm btn-white flex gap-2">
+                                      <FaGithub className="text-xl" />
+                                      <span>Github</span>
+                                    </button>
+                                  </Link>
+                                )}
                               </div>
                             </div>
-                          </SwiperSlide>
-                        );
-                      })}
-                  </Swiper>
+                            <div className="w-full h-[200px] md:h-[300pxl: xl:h-[400px] relative  order-1 xl:order-none rounded-lg overflow-hidden">
+                              <Image
+                                src={project.image}
+                                alt={project.image}
+                                objectPosition="left"
+                                fill
+                                unoptimized={true}
+                                className="object-cover pr-4"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
                 </TabsContent>
               );
             })}

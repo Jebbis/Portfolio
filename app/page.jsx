@@ -46,9 +46,11 @@ const page = () => {
             />
           </h1>
           <p className="max-w-[500px] mb-[44px]">
-            I build visually captivating, user-friendly websites and web apps
-            that transform your ideas into seamless, engaging digital
-            experiences.
+            I work with Microsoft Power Platform to create modern business apps
+            and use Apache Camel to connect systems together. In my free time,
+            I'm usually working on some side project — like a Smart Home
+            Dashboard, a Discord bot. I'm always curious about new tech and
+            looking for ways to build stuff that's actually useful.
           </p>
           <Link href="/contact" className="btn btn-lg btn-accent mb-16">
             <div className="flex items-center gap-3">
@@ -75,7 +77,7 @@ const page = () => {
           </div>
           {/* links */}
           <Socials
-            containerStyles="flex 2xl:flex-col gap-6 xl:hidden 2xl:flex 2xl:absolute 2xl:top-1/2 2xl:right-2 2xl:transform 2xl:-translate-x-1/2 2xl:-translate-y-1/2"
+            containerStyles="flex xl:flex-col gap-6 xl:flex xl:absolute xl:top-1/2 xl:right-2 xl:transform xl:-translate-x-1/2 xl:-translate-y-1/2"
             iconStyles="bg-accent text-white hover:bg-accent-hover transition w-[48px] h-[48px] text-[22px] flex items-center justify-center rounded-full cursor-pointer"
           />
         </div>
